@@ -28,7 +28,7 @@ addLayer("p", {
 	upgrades: {
 		11: { title: "flop"
 		description: "Your first flop!"
-		cost: "new Decimal(1)
+		cost: "new Decimal(1)"
 		    },
 	},
 })
