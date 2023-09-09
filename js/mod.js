@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "1.0",
-	name: "The Game",
+	num: "1.1",
+	name: "Bingus Layer: Day 1",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
