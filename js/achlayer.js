@@ -57,5 +57,10 @@ done() {
             tooltip: "Get e30 floppa points",
         
 	},
+	        19: {
+            name: "9. Floppa: 2, Bingus: 0",
+            done(){return hasChallenge('b', 12)},
+            tooltip: "Complete 'Second Fight' Challenge",
+	},
     }
 })

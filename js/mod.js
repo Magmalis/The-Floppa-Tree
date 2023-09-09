@@ -7,14 +7,14 @@ let modInfo = {
 
 	discordName: "Floppa",
 	discordLink: "https://youtu.be/bWp2buuDWMY?si=dq6sKF0ydWAMKO2z",
-	initialStartPoints: new Decimal (0), // Used for hard resets and new players
+	initialStartPoints: new Decimal (1e50), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "1.11",
-	name: "Fixed bugs (part 1)",
+	num: "1.2",
+	name: "New content and balance",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -53,9 +53,15 @@ if (hasUpgrade('f', 22)) gain = gain.times(2)
 if (hasUpgrade('f', 23)) gain = gain.times(1.5)
 if (hasUpgrade('f', 24)) gain = gain.times(1000)
 if (inChallenge("b", 11)) gain = gain.div(1e9)
+if (hasChallenge("b", 11)) gain = gain.times(20)
 if (hasUpgrade("b", 11)) gain = gain.mul(upgradeEffect("b", 11))
 if (hasUpgrade("b", 12)) gain = gain.mul(upgradeEffect("b", 12))
 if (hasUpgrade("b", 13)) gain = gain.mul(upgradeEffect("b", 13))
+if (inChallenge("b", 12)) gain = gain.div(upgradeEffect("b", 12))
+if (inChallenge("b", 12)) gain = gain.div(1e15)
+if (hasChallenge("b", 12)) gain = gain.mul(upgradeEffect("b", 12))
+if (hasChallenge("b", 12)) gain = gain.mul(1e10)
+if (hasChallenge("b", 12)) gain = gain.div(upgradeEffect("f", 13))
 	return gain
 }
 

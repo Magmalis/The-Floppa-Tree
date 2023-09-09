@@ -36,7 +36,7 @@ addLayer("b", {
 		12: {
 		title: "Watermelon",
 		description: "Boosts point gain based on flops",
-		cost: new Decimal(50),
+		cost: new Decimal(5),
 		effect(){return player.f.points.add(1).pow(hasUpgrade("b", 12)?0.2:2)},
     		effectDisplay(){return format(this.effect())+"x"},
 		    },
@@ -44,7 +44,7 @@ addLayer("b", {
 		13: {
 		title: "Dumpling",
 		description: "Boosts point gain based on points",
-		cost: new Decimal(10000),
+		cost: new Decimal(50000),
 		effect(){return player.points.add(1).pow(hasUpgrade("b", 13)?0.08:0.08)},
     		effectDisplay(){return format(this.effect())+"x"},
 		    },
@@ -55,7 +55,16 @@ challenges: {
         challengeDescription: "floppa vs bingus: round 1, point gain is divided by 1e9",
         canComplete: function() {return player.points.gte(1)},
         goalDescription: "1 Point",
-        rewardDescription: "Unlock 3 bingus upgrades and new challenge",
+        rewardDescription: "Unlock new challenge and boosts point gain by 20",
+    },
+    12: {
+        name: "Second Fight",
+        challengeDescription: "floppa vs bingus: round 1, point gain is divided by points",
+        canComplete: function() {return player.points.gte(1e20)},
+        goalDescription: "e20 Points",
+        rewardDescription: "Unlock new challenge and boosts point gain by points",
+	effect(){return player.points.add(1).pow(inChallenge("b", 12)?0.5:0.3)},
+    	effectDisplay(){return format(this.effect())+"x"},
     },
 }
 })
