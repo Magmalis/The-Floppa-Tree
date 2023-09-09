@@ -52,9 +52,9 @@ done() {
             tooltip: "Buy 'Dumplings' Upgrade",
 },
         18: {
-            name: "8. 1/6.5 from Infinity",
-            done(){return player.points.gte(1e40)},
-            tooltip: "Get e40 floppa points",
+            name: "8. 1/10 from Infinity",
+            done(){return player.points.gte(1e30)},
+            tooltip: "Get e30 floppa points",
         
 	},
     }
