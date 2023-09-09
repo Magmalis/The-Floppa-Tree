@@ -3,7 +3,7 @@ let modInfo = {
 	id: "mymoddddddddddddflopoaflopppaaaaaaaaaaaaaafloppaamogussusubaka1i13irjhierhnwfr",
 	author: "Magmalis",
 	pointsName: "floppa points",
-	modFiles: ["floplayer.js", "achlayer.js", "tree.js"],
+	modFiles: ["floplayer.js", "achlayer.js", "binguslayer.js", "tree.js"],
 
 	discordName: "Floppa",
 	discordLink: "https://youtu.be/bWp2buuDWMY?si=dq6sKF0ydWAMKO2z",
@@ -52,6 +52,10 @@ if (hasUpgrade('f', 21)) gain = gain.times(3)
 if (hasUpgrade('f', 22)) gain = gain.times(2)
 if (hasUpgrade('f', 23)) gain = gain.times(1.5)
 if (hasUpgrade('f', 24)) gain = gain.times(1000)
+if (inChallenge("b", 11)) gain = gain.div(1e9)
+if (hasUpgrade("b", 11)) gain = gain.mul(upgradeEffect("b", 11))
+if (hasUpgrade("b", 12)) gain = gain.mul(upgradeEffect("b", 12))
+if (hasUpgrade("b", 13)) gain = gain.mul(upgradeEffect("b", 13))
 	return gain
 }
 
@@ -65,7 +69,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("e40"))
 }
 
 
