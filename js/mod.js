@@ -8,13 +8,13 @@ let modInfo = {
 	discordName: "Floppa",
 	discordLink: "https://youtu.be/bWp2buuDWMY?si=dq6sKF0ydWAMKO2z",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 0,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "1.3",
-	name: "New layer and bugfix",
+	num: "1.31",
+	name: "Bugfix",
 }
 
 let changelog = `<h1>Changelog:</h1><br>

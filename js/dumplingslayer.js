@@ -7,7 +7,7 @@ addLayer("d", {
 		points: new Decimal(0),
     }},
     color: "#ffffe0",
-    requires: new Decimal(1e130), // Can be a function that takes requirement increases into account
+    requires: new Decimal(1e125), // Can be a function that takes requirement increases into account
     resource: "dumplings", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
