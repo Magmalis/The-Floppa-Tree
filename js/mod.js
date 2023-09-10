@@ -3,18 +3,18 @@ let modInfo = {
 	id: "mymoddddddddddddflopoaflopppaaaaaaaaaaaaaafloppaamogussusubaka1i13irjhierhnwfr",
 	author: "Magmalis",
 	pointsName: "floppa points",
-	modFiles: ["floplayer.js", "achlayer.js", "binguslayer.js", "tree.js"],
+	modFiles: ["floplayer.js", "dumplingslayer.js", "achlayer.js", "binguslayer.js", "tree.js"],
 
 	discordName: "Floppa",
 	discordLink: "https://youtu.be/bWp2buuDWMY?si=dq6sKF0ydWAMKO2z",
-	initialStartPoints: new Decimal (1e50), // Used for hard resets and new players
+	initialStartPoints: new Decimal (10), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "1.2",
-	name: "New content and balance",
+	num: "1.3",
+	name: "New layer and bugfix",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -62,6 +62,12 @@ if (inChallenge("b", 12)) gain = gain.div(1e15)
 if (hasChallenge("b", 12)) gain = gain.mul(upgradeEffect("b", 12))
 if (hasChallenge("b", 12)) gain = gain.mul(1e10)
 if (hasChallenge("b", 12)) gain = gain.div(upgradeEffect("f", 13))
+if (inChallenge("b", 13)) gain = gain.div(upgradeEffect("f", 15))
+if (inChallenge("b", 13)) gain = gain.div(upgradeEffect("f", 15))
+if (inChallenge("b", 13)) gain = gain.div(upgradeEffect("f", 15))
+if (inChallenge("b", 13)) gain = gain.div(upgradeEffect("f", 15))
+if (hasChallenge("b", 13)) gain = gain.mul(1e15)
+if (hasUpgrade("d", 11)) gain = gain.mul(10)
 	return gain
 }
 

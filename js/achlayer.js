@@ -62,5 +62,15 @@ done() {
             done(){return hasChallenge('b', 12)},
             tooltip: "Complete 'Second Fight' Challenge",
 	},
+	       	        21: {
+            name: "10. Absolute Win",
+            done(){return hasChallenge('b', 13)},
+            tooltip: "Complete 'Last Fight' Challenge",
+	},
+	       	        22: {
+            name: "11. Dumplings!!!",
+            done(){return player.d.points.gte(1)},
+            tooltip: "Get 1 dumpling",
+	},
     }
 })

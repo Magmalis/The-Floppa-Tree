@@ -90,7 +90,7 @@ unlocked(){return hasUpgrade("f", 23)},
 		25: {
 		title: "the last flop...",
 		description: "flop... (Unlock new layer)",
-		cost: new Decimal(5e11),
+		cost: new Decimal(1e11),
 		currencyInternalName: "points",
 		currencyDisplayName: "points",
 unlocked(){return hasUpgrade("f", 24)},

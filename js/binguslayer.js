@@ -59,12 +59,20 @@ challenges: {
     },
     12: {
         name: "Second Fight",
-        challengeDescription: "floppa vs bingus: round 1, point gain is divided by points",
+        challengeDescription: "floppa vs bingus: round 2, point gain is divided by points",
         canComplete: function() {return player.points.gte(1e20)},
         goalDescription: "e20 Points",
-        rewardDescription: "Unlock new challenge and boosts point gain by points",
+        rewardDescription: "Unlock new challenge and boosts point gain by points, but effect from 'effect flop' upgrade is always x0",
 	effect(){return player.points.add(1).pow(inChallenge("b", 12)?0.5:0.3)},
-    	effectDisplay(){return format(this.effect())+"x"},
+    },
+    13: {
+        name: "Last Fight",
+        challengeDescription: "floppa vs bingus: round 3, point gain is divided by flops,",
+        canComplete: function() {return player.points.gte(1e20)},
+        goalDescription: "e20 Points",
+        rewardDescription: "Unlock new challenge, 1 bingus, and 5 flops upgrades, boosts point gain by e15",
+	
+    	
     },
 }
 })
