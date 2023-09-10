@@ -24,7 +24,7 @@ addLayer("d", {
     hotkeys: [
         {key: "d", description: "D: Reset for dumplings", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true},
+    layerShown(){return hasChallenge("b", 13)},
 branches: ['f'],
 	upgrades: {
 		11: {
