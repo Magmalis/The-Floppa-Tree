@@ -70,7 +70,7 @@ challenges: {
         challengeDescription: "floppa vs bingus: round 3, point gain is divided by flops,",
         canComplete: function() {return player.points.gte(1e20)},
         goalDescription: "e20 Points",
-        rewardDescription: "Unlock new challenge, 1 bingus, and 5 flops upgrades, boosts point gain by e15",
+        rewardDescription: "Unlock new layer, boosts point gain by e15",
 	
     	
     },
